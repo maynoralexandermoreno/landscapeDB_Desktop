@@ -1,4 +1,4 @@
-package app.databaseConnection;
+package connectJDBC;
 
 // Imports necessary classes
  
@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 import java.sql.CallableStatement;
 import java.sql.ResultSet;
 import java.sql.Types;
-import app.exceptions.LoginFailedException;
+import exceptions.LoginFailedException;
 import java.sql.SQLException;
 
 /*
@@ -38,11 +38,9 @@ public class DBConnection {
 /*
  * Gets driver for mysql, creates connection to landscapeDB;
  */
-	
 	public void createConnection() throws Exception {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-													/* "jdbc:mysql://[url of host]:[port number]/[database][properties]" */
 			dbConnection = DriverManager.getConnection("jdbc:mysql://landscapedb.ct13jztniefj.us-east-2.rds.amazonaws.com:3306/landscapeDB?autoReconnect=true&useSSL=false", this.user, this.password);	
 		} 
 		catch (Exception e) {

@@ -1,4 +1,4 @@
-package app.exceptions;
+package exceptions;
 
 /*
  * Custom exception for Login.java

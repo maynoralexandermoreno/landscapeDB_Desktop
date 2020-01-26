@@ -1,4 +1,4 @@
-package app.login;
+package login;
 // Necessary Imports
 import javafx.application.Application;
 import javafx.stage.Stage;

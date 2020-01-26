@@ -1,12 +1,12 @@
-package app.login;
+package login;
 
 // Necessary Imports
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import application.GUIController;
-import app.exceptions.LoginFailedException;
-import app.databaseConnection.DBConnection;
+import exceptions.LoginFailedException;
+import connectJDBC.DBConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,6 +16,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.PasswordField;
 import javafx.stage.Stage;
 
 public class LoginController implements Initializable {
@@ -25,7 +26,7 @@ public class LoginController implements Initializable {
 	@FXML
 	private TextField user;
 	@FXML
-	private TextField password;
+	private PasswordField password;
 	@FXML
 	private Label error;
 
@@ -85,7 +86,7 @@ public class LoginController implements Initializable {
 	public TextField getPassword() {
 		return password;
 	}
-	public void setPassword(TextField password) {
+	public void setPassword(PasswordField password) {
 		this.password = password;
 	}
 	public Label getError() {
